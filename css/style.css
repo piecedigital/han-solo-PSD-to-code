@@ -542,6 +542,10 @@ h1, h2, h3, h4, h5, h6 {
       transform: scale(1) translate(-50%, -50%); }
 
 @media screen and (max-width: 600px) {
+  .space-exception {
+    position: relative;
+    margin: 0 0 -80px; }
+
   .gun-inspector > div .gun-info-node.open + .gun-info {
     height: 296px; }
   .gun-inspector > div .gun-info {
