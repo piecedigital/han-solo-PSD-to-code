@@ -504,6 +504,7 @@ h1, h2, h3, h4, h5, h6 {
               margin: 6.4px 0; }
           #profile-overlay .profile-info > div > div.info p {
             color: rgba(0, 0, 0, 0.6);
+            padding: 0;
             margin: 0 0 12.8px;
             font-size: 12.8px; }
           #profile-overlay .profile-info > div > div.info .btn {
