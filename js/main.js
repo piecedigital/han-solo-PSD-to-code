@@ -80,12 +80,32 @@ HTMLElement.prototype.hasClass = function(className) {
   }
 };
 
+HTMLElement.prototype.css = function(property, value) {
+  if(this) {
+    //console.log("APPLY CSS");
+
+    if(typeof property === "string") {
+      this.style[property] = value;
+    } else {
+      for(var prop in property) {
+        console.log(this)
+        this.style[prop] = property[prop];
+      }
+    }
+
+    console.log("style", this.style);
+
+    return this;
+  }
+};
+
 document.addEventListener("click", function(e) {
 	if(e.target.hasClass("gun-info-node")) {
-		e.target.toggleClass("open");
-	} else
-	if(e.target.hasClass("profile")) {
-		document.querySelector("#profile-overlay").addClass("open");
+    e.target.toggleClass("open");
+  } else
+  if(e.target.hasClass("profile")) {
+    document.querySelector("#profile-overlay").addClass("open");
+    
 	} else
 	if(e.target.attributes["id"] && e.target.attributes["id"].value === "profile-overlay") {
 		e.target.removeClass("open");
